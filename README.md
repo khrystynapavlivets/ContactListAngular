@@ -57,3 +57,24 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Technologies Used
+
+- Angular 19.0.6
+- TypeScript
+- RxJS
+- SCSS
+- Angular Material
+
+## Folder Structure
+
+/src
+  |-- app
+  |     |-- components/       // UI Components
+  |     |-- shared/  
+  |              |-- services/         // Angular Services
+  |              |-- interfaces/       // Interfaces 
+  |              |-- styles/           // SCSS
+  |-- index.html             // Main HTML file
+  |-- main.ts                // Bootstrap file for Angular app
+  |-- angular.json           // Angular project configuration
