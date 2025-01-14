@@ -1,0 +1,172 @@
+@use 'app/shared/styles/variables' as *;
+@use 'app/shared/styles/mixins' as *;
+
+.container {
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+    z-index: 0;
+    box-sizing: border-box;
+
+    &__title {
+        color: $light-red;
+    }
+
+    .createContact {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $gray-border;
+
+        &__input {
+            width: 73%;
+            height: 35px;
+        }
+
+        &__button {
+            width: 22%;
+            height: 40px;
+            border: 1px solid $dark-green;
+            background-color: $green;
+            box-shadow: 1px 1px 3px 1px $dark-green;
+            border-radius: 5px;
+            color: $white;
+            font-size: 16px;
+
+            &:hover {
+                font-weight: bold;
+                outline: 2px solid $dark-green;
+                background-color: $green-hover;
+            }
+
+            &:focus {
+                font-weight: bold;
+                outline: 4px solid $dark-green;
+                background-color: $green;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        tr,
+        th,
+        td {
+            border-bottom: 1px solid $gray-border;
+            border-top: 1px solid $gray-border;
+            padding: 1rem;
+            text-align: start;
+            font-size: 1.3rem;
+
+        }
+
+        tbody tr:hover {
+            background-color: $light-gray;
+        }
+
+
+        button {
+            @each $prop, $value in $button {
+                #{$prop}: $value;
+            }
+
+            &.edit__btn {
+                @include button-style($orange, $orange, $dark-orange, $light-orange, $lightorange);
+            }
+
+            &.delete__btn {
+                @include button-style($red, $red, $dark-red, $light-red, $lightcoral);
+            }
+
+            &.details__btn {
+                @include button-style($blue, $blue, $dark-blue, $light-blue, $light-blue);
+            }
+        }
+
+
+
+        // button {
+        //     border: 2px solid $gray-border;
+        //     border-radius: .5rem;
+        //     padding: .5rem;
+        //     font-size: 1.1rem;
+        //     cursor: pointer;
+
+        //     &.edit__btn {
+        //         width: 4rem;
+        //         background-color: $orange;
+        //         border-color: $orange;
+        //         color: #000;
+
+        //         &:focus {
+        //             font-weight: bold;
+        //             outline: .25rem solid $dark-orange;
+        //         }
+
+        //         &:not(:disabled):hover {
+        //             font-weight: bold;
+        //             outline: .20rem solid $dark-orange;
+        //             background-color: $light-orange;
+        //         }
+
+        //         &:disabled {
+
+        //             border-color: transparent;
+        //             background-color: $lightorange;
+        //             cursor: not-allowed;
+        //         }
+        //     }
+
+        //     &.delete__btn {
+        //         width: 5rem;
+        //         background-color: $red;
+        //         border-color: $red;
+        //         color: $white;
+
+        //         &:focus {
+        //             outline: .25rem solid $dark-red;
+        //             font-weight: bold;
+        //         }
+
+        //         &:not(:disabled):hover {
+        //             font-weight: bold;
+        //             outline: .20rem solid $red;
+        //             background-color: $light-red;
+        //         }
+
+        //         &:disabled {
+        //             border-color: transparent;
+        //             background-color: $lightcoral;
+        //             cursor: not-allowed;
+        //         }
+        //     } 
+
+        //     &.details__btn {
+        //         width: 5rem;
+        //         background-color: $blue;
+        //         border-color: $blue;
+        //         color: $white;
+
+        //         &:focus {
+        //             outline: .25rem solid $dark-blue;
+        //             font-weight: bold;
+        //         }
+
+        //         &:not(:disabled):hover {
+        //             font-weight: bold;
+        //             outline: .20rem solid $blue;
+        //             background-color: $light-blue;
+        //         }
+
+        //         &:disabled {
+        //             border-color: transparent;
+        //             background-color: $light-blue;;
+        //             cursor: not-allowed;
+        //         }
+        //     } 
+        // }
+    }
+}

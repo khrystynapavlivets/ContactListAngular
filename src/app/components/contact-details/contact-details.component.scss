@@ -1,0 +1,22 @@
+@use 'app/shared/styles/variables' as *;
+
+.contact-details {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: $light-gray;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px $gray;
+
+    h2 {
+        text-align: center;
+        color: $dark-red;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 17px;
+        color: $dark-gray;
+    }
+}

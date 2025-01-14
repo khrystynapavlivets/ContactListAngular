@@ -1,0 +1,29 @@
+$red: rgb(237, 45, 45);
+$dark-red: rgb(212, 7, 7);
+$light-red: rgb(226, 65, 65);
+$lightcoral: rgba(249, 156, 170, 0.5);
+$lightorange: rgb(253, 216, 147);
+$orange: rgba(255, 173, 22, 0.938);
+$dark-orange: rgb(253, 216, 147);
+$light-orange: rgb(243, 173, 42);
+$white: rgb(255, 255, 255);
+$gray-border: rgb(189, 181, 181);
+$gray: rgb(109, 108, 108);
+$dark-gray: #3f3f3f;
+$light-gray: #f5f5f5;
+$green: rgb(9, 151, 9);
+$green-hover: rgba(77, 150, 88, 0.921);
+$dark-green: rgba(16, 100, 38, 0.884);
+$blueFocus: rgb(141, 141, 223);
+$background-modal: rgba(1, 1, 1, 0.493);
+$blue: rgb(79, 79, 249);
+$light-blue: rgb(51, 51, 186);
+$dark-blue: blue;
+
+$button: (
+    border: 2px solid $gray-border,
+    border-radius: 0.5rem,
+    padding: 0.5rem,
+    font-size: 1.1rem,
+    cursor: pointer
+);

@@ -1,0 +1,23 @@
+@mixin button-style($bg-color, $border-color, $focus-color, $hover-bg, $disabled-bg) {
+    width: 5rem;
+    background-color: $bg-color;
+    border-color: $border-color;
+    color: #000;
+  
+    &:focus {
+      font-weight: bold;
+      outline: 0.25rem solid $focus-color;
+    }
+  
+    &:not(:disabled):hover {
+      font-weight: bold;
+      outline: 0.20rem solid $focus-color;
+      background-color: $hover-bg;
+    }
+  
+    &:disabled {
+      border-color: transparent;
+      background-color: $disabled-bg;
+      cursor: not-allowed;
+    }
+  }

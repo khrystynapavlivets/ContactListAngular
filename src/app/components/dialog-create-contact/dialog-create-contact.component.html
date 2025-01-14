@@ -1,0 +1,25 @@
+<div class="modal__window">
+    <div class="modal">
+        <h2 class="modal__text">Create contact</h2>
+        <form [formGroup]="contactForm" (ngSubmit)="saveContact()">
+            <div class="modal__input">
+                <input type="text" formControlName="firstName" class="modal__input__newcontact"
+                    placeholder="First name goes here" required>
+                <input type="text" formControlName="lastName" class="modal__input__newcontact"
+                    placeholder="Second name goes here" required>
+                <input type="number" formControlName="phoneNumber" class="modal__input__newcontact"
+                    placeholder="Number phone goes here" required>
+                <input type="date" formControlName="birthDate" class="modal__input__newcontact"
+                    placeholder="Birth date goes here" required>
+                <input type="email" formControlName="email" class="modal__input__newcontact"
+                    placeholder="Email goes here" required>
+                <input type="text" formControlName="address" class="modal__input__newcontact"
+                    placeholder="Address goes here" required>
+            </div>
+        </form>
+        <div class="button__container">
+            <button class="modal__btn btn__cancel" (click)="cancel()">Скасувати</button>
+            <button class="modal__btn btn__save" (click)="saveContact()" [disabled]="contactForm.invalid">Save</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="container__title">Contact List</h1>
+    <div class="createContact">
+        <input class="createContact__input" [(ngModel)]="searchContact" (input)="filterContacts()"
+            placeholder="Search for contacts here..." />
+        <input type="button" class="createContact__button" value="Create new contact" (click)="AddContact()">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 25%;">First Name</th>
+                <th style="width: 25%;">Last Name</th>
+                <th style="width: 20%;">Number</th>
+                <th style="width: 10%;">Edit</th>
+                <th style="width: 10%;">Delete</th>
+                <th style="width: 10%;">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (contact of filteredContacts; track contact.id) {
+            <tr>
+                <td>{{contact.firstName}}</td>
+                <td>{{contact.lastName}}</td>
+                <td>{{contact.phoneNumber}}</td>
+                <td><button class="edit__btn" (click)="editContact(contact)"> Edit</button></td>
+                <td><button class="delete__btn" (click)="deleteContact(contact.id)">Delete</button></td>
+                <td><button class="details__btn" [routerLink]="['/contact', contact.id]">Details</button></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
